@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="container">
+        <form>
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Form Filter</legend>
+                <div class="control-group">
+                    <div class="form-group row">
+                        <div class="col-md-2 col-xs-12">
+                            <label class="control-label input-label" for="username">UserName:</label>
+                        </div>
+                        <div class="col-md-5 col-xs-12">
+                            <div class="controls bootstrap-timepicker">
+                                <input data-type="search" type="text" class="datetime" type="text" id="username" name="username" placeholder="username" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2 col-xs-12">
+                            <label class="control-label input-label" for="ddlSport">Category:</label>
+                        </div>
+                        <div class="col-md-5 col-xs-12">
+                            <select id="ddlSport" class="ddlFilterTableRow" data-attribute="category">
+                            <option value="0">Select All</option>
+                            <option value="tech">Techinal</option>
+                            <option value="hr">HR</option>
+                            <option value="office">Office</option>
+                            <option value="adv">Advertising</option>
+
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped ui-responsive" data-role="table" id="movie-table" data-filter="true" data-input="#username">
+                <thead>
+                    <tr>
+                        <th data-priority="1">Fullname</th>
+                        <th data-priority="2">Position</th>
+                        <th data-priority="3">Category</th>
+                        <th data-priority="4">Level</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class="Row" data-category="tech">
+                        <td class="lalign">Thulasi Ram.S</td>
+                        <td>Senior</td>
+                        <td>Techinal</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="Row"  data-category="hr">
+                        <td class="lalign">Ram</td>
+                        <td>Junior</td>
+                        <td>HR</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="Row" data-category="office">
+                        <td class="lalign">Ram Kumar.S</td>
+                        <td>Team Leader</td>
+                        <td>Office</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="Row" data-category="adv">
+                        <td class="lalign">Dinesh Kumar.S</td>
+                        <td>Junior</td>
+                        <td>Advertising</td>
+                        <td>1</td>
+                    </tr>
+                    
+                    <tr class="Row" data-category="tech">
+                        <td class="lalign">Thers Ram.S</td>
+                        <td>Senior</td>
+                        <td>Techinal</td>
+                        <td>5</td>
+                    </tr>
+                    <tr class="Row"  data-category="hr">
+                        <td class="lalign">Marina Osa</td>
+                        <td>Team Leader</td>
+                        <td>HR</td>
+                        <td>7</td>
+                    </tr>
+                    <tr class="Row" data-category="office">
+                        <td class="lalign">Ramy John</td>
+                        <td>Team Leader</td>
+                        <td>Office</td>
+                        <td>6</td>
+                    </tr>
+                    <tr class="Row" data-category="adv">
+                        <td class="lalign">Dinar.S</td>
+                        <td>Senior</td>
+                        <td>Advertising</td>
+                        <td>4</td>
+                    </tr>
+                    
+                    <tr class="Row" data-category="hr">
+                        <td class="lalign">Thulamrie</td>
+                        <td>Senior</td>
+                        <td>HR</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="Row"  data-category="hr">
+                        <td class="lalign">Rania Foaad</td>
+                        <td>Junior</td>
+                        <td>HR</td>
+                        <td>a</td>
+                    </tr>
+                    <tr class="Row" data-category="office">
+                        <td class="lalign">Kumar.Sam</td>
+                        <td>Junoir</td>
+                        <td>Office</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="Row" data-category="adv">
+                        <td class="lalign">Kumanr.A</td>
+                        <td>Junior</td>
+                        <td>Advertising</td>
+                        <td>2</td>
+                    </tr>
+                    
+                    <tr class="Row" data-category="tech">
+                        <td class="lalign">Ths Mainae</td>
+                        <td>Team Leader</td>
+                        <td>Techinal</td>
+                        <td>5</td>
+                    </tr>
+                    
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #fff; }
+
+fieldset.scheduler-border {
+  border: 1px groove #cacaca;
+  padding: 0 1.4em 1.4em 1.4em;
+  margin: 2em 0 1.5em 0;
+  -webkit-box-shadow: 0px 0px 0px 0px #cacaca;
+  box-shadow: 0px 0px 0px 0px #cacaca; }
+  fieldset.scheduler-border legend.scheduler-border {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    width: inherit;
+    padding: 0 10px;
+    border-bottom: none; }
+  fieldset.scheduler-border div.ui-select div#ddlSport-button {
+    text-align: left;
+    background: #fff;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #a5a5a5;
+    text-indent: 15px; }
+  fieldset.scheduler-border #ddlSport option {
+    color: #2d2b2b;
+    opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
